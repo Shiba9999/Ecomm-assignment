@@ -7,6 +7,7 @@ import {
   addDetails,
   addFav,
   ClothingR,
+  deleteClothingR,
   deleteProduct,
 } from "../toolkit/productSlice";
 
@@ -24,7 +25,7 @@ const Clothing = () => {
     navigate(`/details/${eachObj._id}`);
   };
   const deleteHandler = (id) => {
-    dispatch(deleteProduct(id));
+    dispatch(deleteClothingR(id));
   };
   const favHandler = (favObj) => {
     dispatch(addFav(favObj));

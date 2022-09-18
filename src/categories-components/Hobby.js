@@ -7,6 +7,7 @@ import {
   addDetails,
   addFav,
   ClothingR,
+  deleteHobbyR,
   deleteProduct,
   HobbyR,
 } from "../toolkit/productSlice";
@@ -24,7 +25,7 @@ const Hobby = () => {
     navigate(`/details/${eachObj._id}`);
   };
   const deleteHandler = (id) => {
-    dispatch(deleteProduct(id));
+    dispatch(deleteHobbyR(id));
   };
   const favHandler = (favObj) => {
     dispatch(addFav(favObj));

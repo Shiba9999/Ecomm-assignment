@@ -6,6 +6,7 @@ import Loading from "../components/Loading";
 import {
   addDetails,
   addFav,
+  deleteFurnitureR,
   deleteProduct,
   FurnitureR,
 } from "../toolkit/productSlice";
@@ -23,7 +24,7 @@ const Furniture = () => {
     navigate(`/details/${eachObj._id}`);
   };
   const deleteHandler = (id) => {
-    dispatch(deleteProduct(id));
+    dispatch(deleteFurnitureR(id));
   };
   const favHandler = (favObj) => {
     dispatch(addFav(favObj));

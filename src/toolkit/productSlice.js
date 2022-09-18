@@ -55,6 +55,18 @@ export const productSlice = createSlice({
     HobbyR:(state,action)=>{
       state.Hobby=state.value.filter((obj)=>obj.category==="Hobby")
     },
+    deleteClothingR:(state,action)=>{
+      state.clothing=state.clothing.filter((obj)=>obj._id !==action.payload)
+    },
+    deleteElectronicsR:(state,action)=>{
+      state.Electronics=state.Electronics.filter((obj)=>obj._id !==action.payload)
+    },
+    deleteFurnitureR:(state,action)=>{
+      state.Furniture=state.Furniture.filter((obj)=>obj._id !==action.payload)
+    },
+    deleteHobbyR:(state,action)=>{
+      state.Hobby=state.Hobby.filter((obj)=>obj._id !==action.payload)
+    }
 
 
   },
@@ -77,6 +89,6 @@ export const productSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { addDetails,deleteProduct,addFav,addCategories,ClothingR,ElectronicsR,FurnitureR,HobbyR } = productSlice.actions;
+export const { addDetails,deleteProduct,addFav,addCategories,ClothingR,ElectronicsR,FurnitureR,HobbyR,deleteClothingR,deleteElectronicsR,deleteFurnitureR,deleteHobbyR } = productSlice.actions;
 
 export default productSlice.reducer;
